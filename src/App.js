@@ -99,7 +99,7 @@ const App = () => {
     setMax("");
     setRating("");
     setChecked(checked.map(item => (
-      {...item, checked : false}
+      {...item, checked : false }
       ))
     );
   };
