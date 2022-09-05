@@ -22,10 +22,10 @@ const App = () => {
   const handleChangePlaceChecked = (id) => {
     const cuisinesList = checked;
 
-    const changeCheckedCity = cuisinesList.map((item) =>
+    const cuisinesListCheckedControl = cuisinesList.map((item) =>
       item.id === id ? { ...item, checked: !item.checked } : item
     );
-    setChecked(changeCheckedCity);
+    setChecked(cuisinesListCheckedControl);
   };
   const selectedCheckBoxId = checked.filter((item) => item.checked).map(checkbox => checkbox.id)
 
@@ -104,10 +104,8 @@ const App = () => {
     );
   };
 
-const obj =  [ { id: 1, checked: false, label: "American" }]
-
-console.log(...obj, "asds");
-  return (
+ 
+   return (
     <>
       <Navbar cartProduct={cartProduct} />
       <Routes>
